@@ -1,0 +1,154 @@
+[package]
+name = "test-programs"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tracing =  "0.1.32"
+tracing-subscriber = "0.2.0"
+
+[[bin]]
+name = "1-demo-ownership"
+path = "./src/bin/Session1/1-demo-ownership.rs"
+
+[[bin]]
+name = "2-demo-references"
+path = "./src/bin/Session1/2-demo-references.rs"
+
+[[bin]]
+name = "3-demo-mut-references"
+path = "./src/bin/Session1/3-demo-mut-references.rs"
+
+[[bin]]
+name = "4-demo-lifetime"
+path = "./src/bin/Session1/4-demo-lifetime.rs"
+
+[[bin]]
+name = "5-demo-lifetime-annotations"
+path = "./src/bin/Session1/5-demo-lifetime-annotations.rs"
+
+[[bin]]
+name = "6-demo-enums-match"
+path = "./src/bin/Session1/6-demo-enums-match.rs"
+
+[[bin]]
+name = "7-demo-option"
+path = "./src/bin/Session1/7-demo-option.rs"
+
+[[bin]]
+name = "8-demo-option"
+path = "./src/bin/Session1/8-demo-concurrency-mpsc.rs"
+
+[[bin]]
+name = "a1-demo-variables"
+path = "./src/bin/Session2/a1-demo-variables.rs"
+
+[[bin]]
+name = "a10-demo-references"
+path = "./src/bin/Session2/a10-demo-references.rs"
+
+[[bin]]
+name = "a11-demo-mut-references"
+path = "./src/bin/Session2/a11-demo-mut-references.rs"
+
+[[bin]]
+name = "a12-demo-vector"
+path = "./src/bin/Session2/a12-demo-vector.rs"
+
+[[bin]]
+name = "a13-demo-hashmaps"
+path = "./src/bin/Session2/a13-demo-hashmaps.rs"
+
+[[bin]]
+name = "a14-demo-error-handling"
+path = "./src/bin/Session2/a14-demo-error-handling.rs"
+
+[[bin]]
+name = "a15-demo-generics"
+path = "./src/bin/Session2/a15-demo-generics.rs"
+
+[[bin]]
+name = "a16-demo-traits"
+path = "./src/bin/Session2/a16-demo-traits.rs"
+
+[[bin]]
+name = "a17-demo-lifetime"
+path = "./src/bin/Session2/a17-demo-lifetime.rs"
+
+[[bin]]
+name = "a18-demo-lifetime-annotation"
+path = "./src/bin/Session2/a18-demo-lifetime-annotation.rs"
+
+[[bin]]
+name = "a19-demo-lifetime-elision"
+path = "./src/bin/Session2/a19-demo-lifetime-elision.rs"
+
+[[bin]]
+name = "a2-demo-controlflows"
+path = "./src/bin/Session2/a2-demo-controlflows.rs"
+
+[[bin]]
+name = "a3-demo-tup"
+path = "./src/bin/Session2/a3-demo-tup.rs"
+
+[[bin]]
+name = "a4-demo-array"
+path = "./src/bin/Session2/a4-demo-array.rs"
+
+[[bin]]
+name = "a5-demo-function"
+path = "./src/bin/Session2/a5-demo-function.rs"
+
+[[bin]]
+name = "a6-demo-struct"
+path = "./src/bin/Session2/a6-demo-struct.rs"
+
+[[bin]]
+name = "a7-demo-enums-match"
+path = "./src/bin/Session2/a7-demo-enums-match.rs"
+
+[[bin]]
+name = "a8-demo-option"
+path = "./src/bin/Session2/a8-demo-option.rs"
+
+[[bin]]
+name = "a9-demo-ownership"
+path = "./src/bin/Session2/a9-demo-ownership.rs"
+
+[[bin]]
+name = "a20-demo-concurrency"
+path = "./src/bin/Session2-Part2/a20-demo-concurrency.rs"
+
+[[bin]]
+name = "a21-demo-concurrency-mpsc"
+path = "./src/bin/Session2-Part2/a21-demo-concurrency-mpsc.rs"
+
+[[bin]]
+name = "a22-demo-box"
+path = "./src/bin/Session2-Part2/a22-demo-box.rs"
+
+[[bin]]
+name = "a23-0-demo-rc"
+path = "./src/bin/Session2-Part2/a23-0-demo-rc.rs"
+
+[[bin]]
+name = "a23-1-demo-rc"
+path = "./src/bin/Session2-Part2/a23-1-demo-rc.rs"
+
+[[bin]]
+name = "a24-demo-arc"
+path = "./src/bin/Session2-Part2/a24-demo-arc.rs"
+
+[[bin]]
+name = "a25-demo-refcell"
+path = "./src/bin/Session2-Part2/a25-demo-refcell.rs"
+
+[[bin]]
+name = "a26-demo-closures"
+path = "./src/bin/Session2-Part2/a26-demo-closures.rs"
+
+[[bin]]
+name = "a27-demo-unsafe"
+path = "./src/bin/Session2-Part2/a27-demo-unsafe.rs"
