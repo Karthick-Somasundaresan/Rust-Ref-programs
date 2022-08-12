@@ -1,5 +1,5 @@
 
-use std::collections::HashMap;
+use std::{collections::HashMap, sync::Arc};
 
 pub trait SomeTrait {
     fn some_trait_function(&self);
@@ -13,11 +13,11 @@ impl SomeTrait for SomeStruct {
     }
 }
 impl SomeStruct {
-    fn get_function_map() -> HashMap<String, (Self, fn(&Self)->Result<String, u8>)> {
-        let mut map:HashMap<String, (Self, fn(&Self)->Result<String, u8>)> = HashMap::new();
-
-        map.insert("String1".to_owned(), (Self{}, SomeStruct::function1));
-        map.insert("String2".to_owned(), (Self{}, SomeStruct::function2));
+    fn get_function_map() -> HashMap<String, (Arc<Box<SomeStruct>>, fn(&Self)->Result<String, u8>)> {
+        let mut map:HashMap<String, (Arc<Box<SomeStruct>>, fn(&Self)->Result<String, u8>)> = HashMap::new();
+        let arc_obj = Arc::new(Box::new(SomeStruct{}));
+        map.insert("String1".to_owned(), (arc_obj.clone(), SomeStruct::function1));
+        map.insert("String2".to_owned(), (arc_obj.clone(), SomeStruct::function2));
         map
     }
 
@@ -32,7 +32,7 @@ impl SomeStruct {
 fn main() {
     // let ss = SomeStruct{};
     let fun_map = SomeStruct::get_function_map();
-    let my_func = fun_map.get("String1");
+    let my_func = fun_map.get("String2");
     if let Some(func) = my_func {
         let (obj, meth) = func;
         let result = meth(obj);
